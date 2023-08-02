@@ -1,0 +1,411 @@
+/* ================ Google Fonts ================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap");
+
+/* ============ custom color,fonts and width ============ */
+:root {
+  --Primary-Color: #4caf50;
+  --Secondary-Color: #505050;
+  --Dark-Color: #191919;
+  --Light-Color: whitesmoke;
+  --gray-color: rgb(182, 182, 182);
+
+  --Font-Poppins: "Poppins", sans-serif;
+  --Font-Roboto: "Roboto", sans-serif;
+
+  --Font-ExtraBold: 800;
+  --Font-Bold: 700;
+  --Font-SemiBold: 600;
+  --Font-Regular: 400;
+  --Font-light: 300;
+
+  --Font-1rem: 1rem;
+  --Font-2rem: 2rem;
+  --Font-2rem: 3rem;
+
+  --Section-padding: clamp(1.5rem, 4vw, 2.2rem) clamp(2rem, 10vw, 25rem) 0
+    clamp(2rem, 10vw, 25rem);
+
+  --transition: 0.5s all ease-in-out;
+}
+
+/* ==================== Body ==================== */
+body {
+  font-family: var(--Font-Poppins);
+}
+
+.container {
+  padding: var(--Section-padding);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+
+/* ==================== Header Section CSS Start ==================== */
+.header-section {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--Light-Color);
+}
+
+/* ===== Navbar CSS ===== */
+.navbar,
+.hero-section {
+  padding: var(--Section-padding);
+}
+
+.logo h2 {
+  font-size: clamp(1.8rem, 5vw, 2rem);
+  color: var(--Primary-Color);
+}
+
+.main-menu > .d-flex {
+  gap: clamp(0.5rem, 3vw, 3.5rem);
+}
+
+.main-menu a {
+  font-size: clamp(0.8rem, 3vw, 1.125rem);
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+
+.main-menu a:hover {
+  color: var(--Primary-Color);
+}
+
+/* ===== Hero CSS ===== */
+.hero-section {
+  margin-top: clamp(5rem, 8vw, 11rem);
+}
+
+.hero-section h1 {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  max-width: 60rem;
+}
+
+.hero-section p {
+  font-size: clamp(1rem, 3vw, 1.125rem);
+  max-width: 60rem;
+  margin-block: 1.5rem;
+}
+
+.hero-form.d-flex {
+  flex-direction: column;
+}
+
+.hero-form input:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+
+.hero-form input {
+  max-width: 30rem;
+  padding: clamp(0.3rem, 2vw, 0.5rem) clamp(1rem, 2vw, 1.5rem);
+  outline: none;
+  color: var(--Dark-Color);
+}
+
+.hero-form input[type="text"]::placeholder,
+.hero-form input[type="email"]::placeholder {
+  color: var(--Secondary-Color);
+}
+
+/* ===== Btn ===== */
+.hero-form input[type="submit"] {
+  border: none;
+  padding: clamp(0.7rem, 2vw, 0.7rem) clamp(1rem, 2vw, 1.6rem);
+  margin-top: 0.6rem;
+  background-color: var(--Primary-Color);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-family: var(--Font-Roboto);
+  font-size: clamp(0.8rem, 3vw, 1.125rem);
+  color: var(--Light-Color);
+  border-radius: 5px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.hero-form input[type="submit"]:hover {
+  background:rgba(0, 0, 0, 0.9);
+}
+
+/* ==================== Blog Section CSS Start ==================== */
+.blog-section {
+  padding-block: clamp(2rem, 5vw, 7rem);
+}
+
+.blog-section > .d-flex {
+  gap: clamp(1rem, 7vw, 10rem);
+}
+
+.blog-section h3 {
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
+}
+
+.blog p {
+  font-size: clamp(1rem, 3vw, 1.125rem);
+  margin-block: clamp(1rem, 10vw, 1.4rem);
+}
+
+.blog button {
+  border: none;
+  padding: clamp(0.5rem, 3vw, 0.8rem) clamp(0.5rem, 3vw, 2rem);
+  margin-top: 0.6rem;
+  background-color: var(--Primary-Color);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-family: var(--Font-Roboto);
+  font-size: clamp(0.8rem, 10vw, 1.125rem);
+  color: var(--Light-Color);
+  border-radius: 5px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.blog button:hover {
+  background:rgba(0, 0, 0, 0.9);
+}
+
+/* ==================== About Section CSS Start ==================== */
+.about-section {
+  background-color: var(--Dark-Color);
+  color: var(--Light-Color);
+  padding-block: clamp(2rem, 4vw, 5rem);
+}
+
+.about-section > .d-flex {
+  gap: clamp(2rem, 5vw, 10rem);
+}
+
+.about-texts h4 {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  margin-bottom: clamp(0.8rem, 5vw, 1rem);
+  font-weight: var(--Font-ExtraBold);
+}
+
+.about-texts h2 {
+  font-size: clamp(1.8rem, 5vw, 2.25rem);
+  font-weight: var(--Font-ExtraBold);
+}
+
+.about-texts p {
+  font-size: clamp(0.4rem, 5vw, 1.125rem);
+  margin-top: clamp(0.5rem, 5vw, 1rem);
+  max-width: 45rem;
+}
+
+.about-blocks.d-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 5vw, 2rem);
+}
+
+.about-box {
+  flex-direction: column;
+  background-color: var(--Light-Color);
+  color: var(--Dark-Color);
+  padding: clamp(2rem, 5vw, 5rem) clamp(2rem, 5vw, 3rem) clamp(2rem, 5vw, 3rem)
+    clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.about-box i {
+  font-size: clamp(3rem, 2vw, 10rem);
+  margin-bottom: clamp(0.5rem, 3vw, 1rem);
+}
+
+.about-box h3 {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+
+
+/* ==================== Process Section CSS Start ==================== */
+.process-section {
+  padding-block: clamp(2rem, 5vw, 7rem);
+}
+
+.process-heading {
+  margin-bottom: clamp(4rem, 8vw, 8rem);
+}
+
+.process-heading h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.25rem);
+  font-weight: var(--Font-ExtraBold);
+}
+
+.process-items {
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--Dark-Color);
+  max-width: 90%;
+  margin-inline: auto;
+  position: relative;
+}
+
+.process-items.d-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 4vw, 1.5rem);
+}
+
+.process-circle {
+  position: absolute;
+  top: -1.7rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: var(--Dark-Color);
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.circle-1 {
+  left: 2rem;
+}
+
+.circle-2 {
+  right: 2rem;
+}
+
+.circle-3 {
+  left: 50%;
+}
+
+.process-text h3 {
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  font-weight: var(--Font-ExtraBold);
+  color: var(--Primary-Color);
+}
+
+.process-text p {
+  font-size: clamp(0.8rem, 5vw, 1.125rem);
+}
+
+.process-text-1 {
+  text-align: left;
+  margin-top: clamp(1rem, 4vw, 2rem);
+  margin-left: 2rem;
+}
+
+.process-text-2 {
+  text-align: center;
+  margin-top: clamp(1rem, 4vw, 2rem);
+  margin-left: 3.2rem;
+}
+
+.process-text-3 {
+  text-align: right;
+  margin-top: clamp(1rem, 4vw, 2rem);
+  margin-right: 2rem;
+}
+
+/* ==================== Testimony Section CSS Start ==================== */
+.testimony-section {
+  padding-block: clamp(2rem, 5vw, 7rem);
+  background-color: var(--Dark-Color);
+}
+
+.testimony-section > .d-flex {
+  gap: clamp(1rem, 4vw, 2rem);
+}
+
+.testimony-box {
+  padding: clamp(2rem, 3vw, 3rem) clamp(2rem, 5vw, 7rem) clamp(2rem, 3vw, 4rem)
+    clamp(2rem, 3vw, 4rem);
+  background-color: var(--Secondary-Color);
+  color: var(--Light-Color);
+}
+
+.testimony-img {
+  max-width: 7rem;
+  max-width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.testimony-box p {
+  font-size: clamp(1rem, 3vw, 1.125rem);
+  margin-block: clamp(0.8rem, 3vw, 1rem);
+}
+
+.testimony-box h3 {
+  color: var(--Primary-Color);
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
+  font-weight: var(--Font-ExtraBold);
+}
+
+/* ==================== Contact Section CSS Start ==================== */
+.contact-section {
+  padding-block: clamp(2rem, 3vw, 4rem);
+}
+
+.contact-section > .d-flex {
+  flex-direction: column;
+}
+
+.contact-header h2 {
+  font-size: clamp(1.8rem, 5vw, 2.25rem);
+  font-weight: var(--Font-ExtraBold);
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+}
+
+.contact-form {
+  width: 60%;
+}
+
+.contact-form.d-flex {
+  flex-direction: column;
+}
+
+.contact-form input,
+textarea {
+  padding: clamp(0.5rem, 2vw, 0.8rem) clamp(1rem, 2vw, 1.5rem);
+  outline: none;
+}
+
+.contact-form input{
+  margin-top: clamp(1rem, 4vw, 1.5rem);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--gray-color);
+}
+
+.contact-form textarea{
+  margin-top: clamp(1rem, 4vw, 1.5rem);
+  height: clamp(10rem,10vw,20rem)
+}
+
+.contact-form input[type="submit"]{
+  background: var(--Primary-Color);
+  border: none;
+  text-transform: capitalize;
+  color: var(--Light-Color);
+  transition: var(--transition);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover{
+  background:rgba(0, 0, 0, 0.9);
+}
+
+.footer-section{
+  background-color: var(--Dark-Color);
+  color: var(--Light-Color);
+  padding-bottom: 2rem;
+}
+
+.footer-section h3{
+  text-align: center;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  font-weight: var(--Font-Regular);
+}

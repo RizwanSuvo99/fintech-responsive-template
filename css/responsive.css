@@ -1,0 +1,72 @@
+@media (max-width: 500px) {
+  .about-blocks.d-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-section > .d-flex {
+    flex-direction: column;
+  }
+  .process-items.d-grid {
+    grid-template-columns: 1fr;
+  }
+  .process-circle {
+    display: none;
+  }
+
+  .process-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blog-section > .d-flex {
+    flex-direction: column;
+  }
+
+  .blog {
+    max-width: 90%;
+    margin-top: 0.5rem;
+  }
+  .blog p {
+    margin-block: clamp(0.5rem, 10vw, 0.8rem);
+  }
+
+  .blog button {
+    padding: clamp(0.3rem, 3vw, 0.5rem) clamp(0.5rem, 3vw, 1rem);
+    font-size: clamp(0.5rem, 10vw, 1rem);
+  }
+
+  .about-section > .d-flex {
+    flex-direction: column;
+  }
+
+  .about-texts {
+    text-align: center;
+  }
+
+  .testimony-section > .d-flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1100px) {
+  .process-items.d-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .process-circle {
+    display: none;
+  }
+
+  .process-text {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .process-items.d-grid {
+    grid-template-columns: 1fr;
+  }
+}
